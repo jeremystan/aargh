@@ -1,8 +1,7 @@
 # aargh
 
+<a href="Pirate Emoji"><img src="https://www.emojirequest.com/images/PirateEmoji.jpg" align="left" height="32" width="32" ></a>
 Easily Expose R Functions to Command Line Arguments.
-
-<a href="Pirate Emoji"><img src="https://www.emojirequest.com/images/PirateEmoji.jpg" align="left" height="48" width="48" ></a>
 
 This package provides an easy wrapper for automagically converting any R function into a command line driven application. It is inspired by [easyargs](https://pypi.python.org/pypi/easyargs/0.9.3) in Python, and uses the R [argparse](https://cran.r-project.org/web/packages/argparse/index.html) library to access the Python argparse parser.
 
