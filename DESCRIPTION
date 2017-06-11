@@ -1,0 +1,13 @@
+Package: aargh
+Title: Easily Expose R Functions to Command Line Arguments
+Version: 0.0.0.9000
+Authors@R: person("Jeremy", "Stanley", email = "jeremy.stanley@gmail.com", role = c("aut", "cre"))
+Description: Exposes the arguments of any R function to the command line in order to more easily create R applications.
+Depends: R (>= 3.4.0)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+  argparse
+RoxygenNote: 6.0.1
+Suggests: testthat
