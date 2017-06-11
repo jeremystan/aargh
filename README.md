@@ -31,7 +31,7 @@ repeat_text <- function(text = 'hi', times = 1L) {
 aargh(repeat_text)
 ```
 
-Then we can run this app as an `Rscript` without any arguments:
+Then we can run this app as an `Rscript`:
 
 ```
 $ Rscript example.R
