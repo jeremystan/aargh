@@ -4,6 +4,15 @@ Easily Expose R Functions to Command Line Arguments.
 
 This package provides an easy wrapper for automagically converting any R function into a command line driven application. It is inspired by [easyargs](https://pypi.python.org/pypi/easyargs/0.9.3) in Python, and uses the R [argparse](https://cran.r-project.org/web/packages/argparse/index.html) library to access the Python argparse parser.
 
+## Installation
+
+You can install this package directly from github using:
+
+```r
+library(devtools)
+install_github('jeremystan/aargh')
+```
+
 ## Usage
 
 For example, consider the simple example app [example.R](/examples/example.R):
