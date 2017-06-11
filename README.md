@@ -40,13 +40,35 @@ $ Rscript example.R --times 5 --text bye
 bye, bye, bye, bye, bye
 ```
 
-## Limitations
+## Functions supported
 
 This only works for functions that:
 
 * Have constant primitive defaults for all arguments (used to infer type)
 * Supported types are `numeric`, `integer`, `character` or `logical`
 
-Note that you have to use the full syntax `--arg_name` to change an argument.
+If you want to work with a function that has arguments without defaults, you can simply write a wrapper function that provides a default for those arguments. For example, consider the [sample.R](/examples/sample.R) example:
+
+```r
+library(aargh)
+
+#' Wrap the base sample function to specify the size type
+wrap_sample <- function(size = 1L) {
+  sample(size)
+}
+
+aargh(wrap_sample)
+```
+
+Then from the command line:
+
+```
+$ Rscript sample.R
+1
+$ Rscript sample.R --size 10
+ [1]  8  3  2  7  4  9  1  6 10  5
+```
+
+Note that you must use the full syntax `--arg_name` to change an argument.
 
 For logical arguments, you can use syntax like `--flag FALSE` or `--flag F` or `--flag False`, similarly `--flag TRUE`, `--flag T` and `--flag True` all work. But the flag does not work in isolation (e.g., `--flag` will complain it is missing an argument instead of defaulting to `TRUE`).
